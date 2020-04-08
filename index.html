@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="id">
+
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="vue.min.js"></script>
+
+  <title>Dynamic Content</title>
+</head>
+
+<body>
+  <div id="spa">
+        <div class="jumbotron jumbotron-fluid p-3">
+          <h1 class="display-4 text-center">{{ write?write:'tulis pada field dibawah ini :)' }}</h1>
+          <hr class="my-4"/>
+          <p class="lead text-center"><input type="text" class="form-control" v-model="write"/></p>
+        </div>
+
+      <script>
+      var spa = new Vue({
+        el: '#spa',
+        data: {
+          write: 'Contoh pengambilan data dinamis'
+        }
+      })
+      </script>
+
+ </div>
+ </body>
+</html>
